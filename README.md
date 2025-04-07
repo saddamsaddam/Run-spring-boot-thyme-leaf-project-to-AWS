@@ -1,7 +1,11 @@
 # Run-spring-boot-thyme-leaf-project-to-AWS
 
 ubuntu@ip-172-31-46-9:~$ cd home
+
+
 ubuntu@ip-172-31-46-9:~/home$ unzip DeviceManagement.zip
+
+
 Archive:  DeviceManagement.zip
    creating: DeviceManagement/
   inflating: DeviceManagement/.gitignore  
@@ -564,13 +568,22 @@ Archive:  DeviceManagement.zip
    creating: DeviceManagement/target/test-classes/com/device/DeviceManagement/
   inflating: DeviceManagement/target/test-classes/com/device/DeviceManagement/DeviceManagementApplicationTests.class  
   inflating: DeviceManagement/target/test-classes/com/device/DeviceManagement/MongoDBTest.class  
+
+  
 ubuntu@ip-172-31-46-9:~/home$ rm -f Devicemanagement.zip
+
 ubuntu@ip-172-31-46-9:~/home$ cd Devicemanagement
+
 -bash: cd: Devicemanagement: No such file or directory
+
 ubuntu@ip-172-31-46-9:~/home$ cd DeviceManagement
+
 ubuntu@ip-172-31-46-9:~/home/DeviceManagement$ cd ..
+
 ubuntu@ip-172-31-46-9:~/home$ cd DeviceManagement
+
 ubuntu@ip-172-31-46-9:~/home/DeviceManagement$  docker buildx build -t userservice .
+
 [+] Building 11.5s (8/8) FINISHED                                                                                                     docker:default
  => [internal] load build definition from Dockerfile                                                                                            0.0s
  => => transferring dockerfile: 431B                                                                                                            0.0s
@@ -599,13 +612,22 @@ ubuntu@ip-172-31-46-9:~/home/DeviceManagement$  docker buildx build -t userservi
  => exporting to image                                                                                                                          0.3s
  => => exporting layers                                                                                                                         0.3s
  => => writing image sha256:12b209d5a927a314b709721ba715ba37b92e9150f1b3bf2ac29985ca5ef71bc5                                                    0.0s
- => => naming to docker.io/library/userservice                                                                                                  0.0s
+ => => naming to docker.io/library/userservice  0.0s
+
+ 
 ubuntu@ip-172-31-46-9:~/home/DeviceManagement$ docker run --name snvnv1 -d -p 8080:8080 userservice
+
 96f0976b71b736bd6c8b5d2b7ea8dd8e7a3fc5cda8790500c35a9d4667d4d8b6
+
+
 ubuntu@ip-172-31-46-9:~/home/DeviceManagement$ docker ps
+
 CONTAINER ID   IMAGE         COMMAND               CREATED         STATUS         PORTS                                         NAMES
 96f0976b71b7   userservice   "java -jar app.jar"   9 minutes ago   Up 9 minutes   0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp   snvnv1
+
+
 ubuntu@ip-172-31-46-9:~/home/DeviceManagement$ docker logs snvnv1
+
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
@@ -635,9 +657,17 @@ ubuntu@ip-172-31-46-9:~/home/DeviceManagement$ docker logs snvnv1
 2025-04-07T13:47:31.551Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
 2025-04-07T13:47:31.591Z  INFO 1 --- [           main] c.d.D.DeviceManagementApplication        : Started DeviceManagementApplication in 7.918 seconds (process running for 9.243)
 Program Are started
+
+
 ubuntu@ip-172-31-46-9:~/home/DeviceManagement$ curl http://localhost:8080/
+
+
 {"timestamp":1744034350956,"status":404,"error":"Not Found","path":"/"}ubuntu@ip-172-31-46-9:~/home/DeviceManagement$ 
+
+
 ubuntu@ip-172-31-46-9:~/home/DeviceManagement$ curl http://localhost:8080/login/login 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
