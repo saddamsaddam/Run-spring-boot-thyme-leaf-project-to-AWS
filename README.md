@@ -1,5 +1,8 @@
 # Run-spring-boot-thyme-leaf-project-to-AWS
 
+https://www.linkedin.com/posts/saddam-hossen-619a81174_alhamdulillah-deploy-spring-boot-project-activity-7315069987742760960-qjK5?utm_source=share&utm_medium=member_desktop&rcm=ACoAAClzCjUBHlifkJwMqARVRi6P_1Z20WL_FVU
+
+
 ubuntu@ip-172-31-46-9:~$ cd home
 
 
