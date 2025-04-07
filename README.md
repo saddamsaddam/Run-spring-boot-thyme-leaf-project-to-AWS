@@ -65,23 +65,11 @@ ubuntu@ip-172-31-46-9:~/home/DeviceManagement$ docker logs snvnv1
 
  :: Spring Boot ::                (v3.3.0)
 
-2025-04-07T13:47:24.678Z  INFO 1 --- [           main] c.d.D.DeviceManagementApplication        : Starting DeviceManagementApplication v0.0.1-SNAPSHOT using Java 21.0.6 with PID 1 (/app/app.jar started by root in /app)
-2025-04-07T13:47:24.686Z  INFO 1 --- [           main] c.d.D.DeviceManagementApplication        : No active profile set, falling back to 1 default profile: "default"
-2025-04-07T13:47:26.174Z  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
-2025-04-07T13:47:26.340Z  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 156 ms. Found 11 MongoDB repository interfaces.
+2025-04-07T13:47:24.678Z  INFO 1 --- [           main] c.d.D.DeviceManagementApplication        : Starting DeviceManagementApplication v0.0.1-SNAPSHOT using Java 21.0.6 with PID 1 
+
 2025-04-07T13:47:28.025Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
 2025-04-07T13:47:28.046Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-04-07T13:47:28.047Z  INFO 1 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
-2025-04-07T13:47:28.123Z  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-04-07T13:47:28.127Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3212 ms
-2025-04-07T13:47:28.616Z  INFO 1 --- [556.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server ac-hwhmcth-shard-00-00.lhvo556.mongodb.net:27017 to client view of cluster
-2025-04-07T13:47:28.713Z  INFO 1 --- [           main] org.mongodb.driver.client                : MongoClient with metadata {"application": {"name": "Cluster0"}, "driver": {"name": applicationName='Cluster0', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
-2025-04-07T13:47:28.747Z  INFO 1 --- [556.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server ac-hwhmcth-shard-00-01.lhvo556.mongodb.net:27017 to client view of cluster
-2025-04-07T13:47:28.775Z  INFO 1 --- [556.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server ac-hwhmcth-shard-00-02.lhvo556.mongodb.net:27017 to client view of cluster
-2025-04-07T13:47:30.706Z  INFO 1 --- [ngodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description 
-2025-04-07T13:47:30.716Z  INFO 1 --- [ngodb.net:27017] org.mongodb.driver.cluster               : Discovered replica set primary ac-hwhmcth-shard-00-02.lhvo556.mongodb.net:27017 with max election id 7fffffff0000000000000202 and max set version 197
-2025-04-07T13:47:31.551Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-04-07T13:47:31.591Z  INFO 1 --- [           main] c.d.D.DeviceManagementApplication        : Started DeviceManagementApplication in 7.918 seconds (process running for 9.243)
+
 Program Are started
 
 
@@ -158,6 +146,10 @@ ubuntu@ip-172-31-46-9:~/home/DeviceManagement$ curl http://localhost:8080/login/
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+
+
+
 
 Great! Here's how to figure out **which security group** is currently applied to your EC2 instance, and **where to add the port 8080 rule**:
 
